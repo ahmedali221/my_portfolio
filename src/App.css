@@ -1,89 +1,121 @@
-      body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-        -webkit-font-smoothing: "Roboto", sans-serif;
-        -moz-osx-font-smoothing: "Roboto", sans-serif;
-        font-style: normal;
-      }
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin: 0;
-      }
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
-      :root {
-        --primary: #5e3bee;
-        --heading-color: #282938;
-        --bg-shade: #f5fcff;
-        --github: #e62872;
-        --darkblue: #1c1e53;
-        --black: #000000;
-        --white: #ffffff;
-      }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
-      .btn {
-        font-family: "Roboto";
-        display: inline-block;
-        padding: 14px 32px;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        -o-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        border-radius: 4px;
-        -o-transition: background-color 0.5s;
-        -webkit-transition: background-color 0.5s;
-        -moz-transition: background-color 0.5s;
-        -ms-transition: background-color 0.5s;
-        transition: background-color 0.5s;
-      }
+:root {
+  --primary: #5e3bee;
+  --heading-color: #282938;
+  --bg-shade: #f5fcff;
+  --github: #e62872;
+  --darkblue: #1c1e53;
+  --black: #000000;
+  --white: #ffffff;
+}
 
-      .btn-outline-primary {
-        color: var(--primary);
-        background-color: var(--white);
-        border: 1px solid var(--primary);
-      }
+/* Base button styles */
+.btn {
+  font-family: "Roboto";
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  /* 14px 32px in rem */
+  font-size: 1rem;
+  /* 16px in rem */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  /* 24px in rem */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  /* 4px in rem */
+  transition: all 0.3s ease;
+}
 
-      .btn-outline-primary:hover {
-        color: var(--white);
-        background-color: var(--primary);
-      }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
 
-      .btn-primary {
-        color: var(--white);
-        background-color: var(--primary);
-        border: 1px solid var(--primary);
-      }
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+}
 
-      .btn-primary:hover {
-        color: var(--primary);
-        background-color: var(--white);
-      }
+.btn-outline-primary {
+  color: var(--primary);
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+}
 
-      .btn-github {
-        color: var(--white);
-        background-color: var(--github);
-        border: var(--github);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.95);
-        gap: 16px;
-      }
+.btn-outline-primary:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
 
-      .btn-github:hover {
-        color: var(--github);
-        background-color: var(--white);
-      }
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  color: var(--primary);
+  background-color: var(--white);
+}
+
+.btn-github {
+  color: var(--white);
+  background-color: var(--github);
+  border: 1px solid var(--github);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.95);
+}
+
+.btn-github:hover {
+  color: var(--github);
+  background-color: var(--white);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}

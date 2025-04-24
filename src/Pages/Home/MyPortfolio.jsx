@@ -28,7 +28,6 @@ export default function MyPortfolio() {
               border: 'none',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '8px'
             }}
           >
             <FaGithub /> Visit My GitHub
@@ -47,7 +46,7 @@ export default function MyPortfolio() {
             >
               <Card className="h-100 rounded shadow">
                 <div className="position-relative rounded-top">
-                  <Image src={item.src} alt="Placeholder" className="img-fluid rounded-top h-auto" />
+                  <Image src={item.src} alt={item.title || "Portfolio image"} className="img-fluid rounded-top h-auto" style={{ width: '100%', height: 'auto' }} />
                 </div>
                 <Card.Body className="d-flex flex-column justify-content-between p-4">
                   <div>

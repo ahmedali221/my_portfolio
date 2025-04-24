@@ -8,21 +8,15 @@ export default function ContactMe() {
       sx={{
         py: { xs: 10, md: 12 },
         backgroundColor: 'var(--white)',
-        width: '100vw',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        position: 'relative',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        maxWidth: '100%'
       }}
     >
       <Container
-        maxWidth={false}
+        maxWidth="md"
         sx={{
-          width: '100%',
           px: { xs: 2, md: 8 }
         }}
       >
@@ -57,9 +51,7 @@ export default function ContactMe() {
           component="form"
           sx={{
             mt: 4,
-            maxWidth: '800px',
             mx: 'auto',
-            width: '100%',
             px: { xs: 2, md: 4 },
             '& .MuiOutlinedInput-root': {
               '& fieldset': {

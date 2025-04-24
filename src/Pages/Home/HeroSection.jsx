@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 export default function HeroSection() {
   const iconStyle = {
     color: 'var(--darkblue)',
-    fontSize: '24px',
+    fontSize: { xs: '20px', md: '24px' },
     marginRight: '10px',
     transition: 'color 0.3s ease',
     '&:hover': {
@@ -96,7 +96,7 @@ export default function HeroSection() {
               Full Stack Web Developer and Flutter Mobile Specialist with expertise in building comprehensive web applications and cross-platform mobile solutions. Proficient in both frontend and backend technologies, delivering scalable and efficient applications with exceptional user experiences.
             </Typography>
 
-            <Box sx={{ display: 'flex', gap: 3, mb: 4 }}>
+            <Box sx={{ display: 'flex', mb: 4 }}>
               {[
                 { icon: FaGithub, link: "https://github.com/ahmedali221" },
                 { icon: FaLinkedin, link: "https://www.linkedin.com/in/ahmedali2322" },
@@ -149,8 +149,10 @@ export default function HeroSection() {
               src="./img/Ahmed.jpg"
               alt="Hero Section"
               sx={{
-                width: { xs: 280, md: 400 },
-                height: { xs: 280, md: 400 },
+                width: { xs: '100%', sm: '240px', md: '320px', lg: '400px' },
+                height: 'auto',
+                maxWidth: '400px',
+                aspectRatio: '1/1',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
                 transition: 'transform 0.3s ease',
                 '&:hover': {

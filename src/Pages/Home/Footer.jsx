@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 function Footer() {
   const iconStyle = {
     color: 'var(--darkblue)',
-    fontSize: '24px',
+    fontSize: { xs: '20px', sm: '24px' },
     '&:hover': {
       color: 'var(--primary)',
     }
@@ -15,11 +15,11 @@ function Footer() {
     <Box 
       component="footer" 
       sx={{ 
-        py: 5,
+        py: { xs: 3, md: 5 },
         backgroundColor: 'var(--bg-shade)'
       }}
     >
-      <Container>
+      <Container maxWidth="lg">
         <Stack 
           spacing={2} 
           alignItems="center"
@@ -35,7 +35,12 @@ function Footer() {
             </MuiLink>
           </Typography>
 
-          <Stack direction="row" spacing={3} justifyContent="center">
+          <Stack 
+            spacing={2} 
+            alignItems="center"
+            textAlign="center"
+            direction={{ xs: "column", sm: "row" }}
+          >
             <MuiLink href="https://github.com/yourusername" target="_blank" rel="noreferrer" sx={iconStyle}>
               <FaGithub />
             </MuiLink>

@@ -31,14 +31,13 @@ export default function MySkills() {
           container
           spacing={2}
           sx={{
-            display: 'grid',
+            display: { xs: 'block', md: 'grid' },
             gridTemplateColumns: {
               xs: '1fr',
               sm: 'repeat(2, 1fr)',
               md: 'repeat(3, 1fr)'
             },
-            gap: { xs: '24px', md: '50px' },
-            padding: '20px'
+            padding: { xs: '10px', md: '20px' }
           }}
         >
           {data?.skills?.map((item, index) => (
@@ -50,7 +49,6 @@ export default function MySkills() {
                 flexDirection: 'column',
                 bgcolor: 'var(--white)',
                 p: 2,
-                gap: 2,
                 borderRadius: '10.6px',
                 border: '3px solid var(--bg-shade)',
                 width: 'auto',
@@ -70,9 +68,9 @@ export default function MySkills() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  height: '120px',  // Added fixed height
-                  width: '120px',   // Added fixed width
-                  margin: '0 auto'  // Center the box
+                  height: { xs: '100px', sm: '120px' },
+                  width: { xs: '100px', sm: '120px' },
+                  margin: '0 auto'
                 }}
               >
                 <CardMedia
@@ -80,7 +78,6 @@ export default function MySkills() {
                   image={item.src}
                   alt={item.title}
                   sx={{
-                    width: '100%',
                     height: '100%',
                     objectFit: 'contain',
                     transition: 'transform 0.3s ease',
@@ -91,7 +88,7 @@ export default function MySkills() {
                 />
               </Box>
 
-              <CardContent sx={{ p: 0, flex: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <CardContent sx={{ p: 0, flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <Typography
                   variant="h3"
                   sx={{
@@ -117,7 +114,6 @@ export default function MySkills() {
                 <Box sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  gap: 1,
                   mt: 2
                 }}>
                   {item.technologies.map((tech, techIndex) => (

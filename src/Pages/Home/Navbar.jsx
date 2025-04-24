@@ -77,25 +77,22 @@ function Navbar() {
         py: isScrolled ? 0 : 1
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Toolbar sx={{ 
           justifyContent: 'space-between', 
           py: 1,
           minHeight: '64px',
-          width: '100%',
           margin: '0 auto'
         }}>
           <Box sx={{ 
             display: 'flex',
             alignItems: 'center',
-            gap: { xs: 2, md: 8 }
           }}>
             <Box 
               onClick={() => scrollTo('heroSection')}
               sx={{ 
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
                 cursor: 'pointer',
                 marginRight: { xs: 0, md: 4 }
               }}
@@ -151,7 +148,6 @@ function Navbar() {
           <Box sx={{ 
             display: 'flex', 
             alignItems: 'center', 
-            gap: 2,
             ml: 'auto'
           }}>
             <Button
@@ -193,7 +189,10 @@ function Navbar() {
         }}
         sx={{
           display: { xs: 'block', md: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 }
+          '& .MuiDrawer-paper': { 
+            boxSizing: 'border-box', 
+            width: { xs: '200px', sm: '240px' } 
+          }
         }}
       >
         {drawer}
