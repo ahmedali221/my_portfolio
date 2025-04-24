@@ -114,7 +114,8 @@ export default function MySkills() {
                 <Box sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  mt: 2
+                  mt: 2,
+                  gap: 1  
                 }}>
                   {item.technologies.map((tech, techIndex) => (
                     <Box
@@ -140,6 +141,7 @@ export default function MySkills() {
                       {tech}
                     </Box>
                   ))}
+               
                 </Box>
               </CardContent>
             </Card>
