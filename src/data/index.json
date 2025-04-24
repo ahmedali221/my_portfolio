@@ -1,0 +1,139 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "src": "./img/ui.gif",
+      "title": "Front-End",
+      "description": "Expertise in creating responsive and interactive user interfaces using React.js, HTML5, CSS3, and JavaScript. Proficient in modern front-end frameworks and UI libraries.",
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Material-UI",
+        "Redux"
+      ]
+    },
+   
+    {
+      "id": "2",
+      "src": "./img/backend.gif",
+      "title": "Back-End",
+      "description": "Strong foundation in server-side development using Node.js and Express.js. Experience with RESTful APIs, database management, and server architecture design.",
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Firebase",
+        "RESTful APIs",
+        "SQL",
+        "PostgreSQL"
+      ]
+    },
+ 
+   {
+      "id": "3",
+      "src": "./img/activity-feed.gif",
+      "title": "Mobile Development",
+      "description": "Specialized in building high-performance mobile applications using Flutter. Expert in creating native-like experiences, complex UI implementations, and seamless platform integration for both iOS and Android platforms.",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "State Management",
+         "BLoC",
+        "Riverpod",
+        "Firebase",
+        "Data Persistence",
+        "REST APIs",
+        "Responsive Design",
+        "API Integration",
+         "Push Notifications",
+         "Local Storage"
+      ]
+       
+       
+       
+        
+
+      
+      
+       
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "1",
+      "src": "./img/Cover.png",
+      "title": "MedTime",
+      "description": " Developed a medication management app using Flutter, Firebase, and Riverpod for State  Management. Features include reminders, medication management, and timely notifications. ",
+      "link": "View In Github",
+      "linkUrl": "https://github.com/ahmedali221/medtime",
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "Riverpod",
+        "Local Notifications",
+        "Cloud Functions"
+      ]
+    },
+    {
+      "id": "2",
+      "src": "./img/HomeZmart.jpg",
+      "title": "HomeZmart",
+      "description": "Developed a cross-platform app using Flutter, Firebase, and BLoC for State Management. Features includebrowsing, product categories, cart management, and secure payments.",
+      "link": "View In Github",
+      "linkUrl": "https://github.com/ahmedali221/homezmart",
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "BLoC",
+        "Cloud Firestore",
+        "Stripe Payment"
+      ]
+    },
+    {
+      "id": "3",
+      "src": "./img/Shoppy.png",
+      "title": "Shoppy",
+      "description": "Developed a cross-platform app using Flutter, Firebase, and BLoC for State Management. Features include browsing, product categories, cart management, and secure payments.",
+      "link": "View In Github",
+      "linkUrl": "https://github.com/ahmedali221/shoppy",
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "BLoC",
+        "REST APIs",
+        "Payment Integration"
+      ]
+    }
+   
+  ],
+  "testimonial": [
+    {
+      "id": "1",
+      "count": "5",
+      "src": "./img/avatar-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Dianne Russel",
+      "author_designation": "Starbucks"
+    },
+    {
+      "id": "2",
+      "count": "5",
+      "src": "./img/avatar-image-1.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Kristin Watson",
+      "author_designation": "Louis Vuitton"
+    },
+    {
+      "id": "3",
+      "count": "5",
+      "src": "./img/avatar-image-2.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "author_name": "Kathryn Murphy",
+      "author_designation": "McDonald's"
+    }
+  ]
+}
