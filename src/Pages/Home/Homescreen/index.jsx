@@ -4,8 +4,9 @@ import HeroSection from "../HeroSection";
 import MyPortfolio from "../MyPortfolio";
 import MySkills from "../MySkills";
 import ContactMe from "../ContactMe";
-import ExtracurricularActivities from "../ExtracurricularActivities";
-import CoursesCertificates from "../CoursesCertificates";
+import Education from "../Education";
+import Internships from "../Internships";
+import Experience from "../Experience";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       <HeroSection />
       <MySkills />
       <AboutMe />
-      <ExtracurricularActivities />
-      <CoursesCertificates />
+      <Education />
+      <Internships />
+      <Experience />
       <MyPortfolio />
       <ContactMe />
       <Footer />

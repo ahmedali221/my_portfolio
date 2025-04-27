@@ -50,8 +50,11 @@ function Navbar() {
   const navItems = [
     { label: 'Home', id: 'heroSection' },
     { label: 'Skills', id: 'mySkills' },
-    { label: 'About Me', id: 'AboutMe' },
-    { label: 'Portfolio', id: 'MyPortfolio' },
+    { label: 'About', id: 'AboutMe' },
+    { label: 'Education', id: 'education' },
+    { label: 'Internships', id: 'internships' },
+    { label: 'Experience', id: 'experience' },
+    { label: 'Portfolio', id: 'MyPortfolio' }
   ];
 
   const drawer = (
