@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Container, Button, IconButton, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import CodeIcon from '@mui/icons-material/Code'; // Add this import at the top
+import CodeIcon from '@mui/icons-material/Code';  
 
 
 function Navbar() {
@@ -52,7 +52,6 @@ function Navbar() {
     { label: 'Skills', id: 'mySkills' },
     { label: 'About Me', id: 'AboutMe' },
     { label: 'Portfolio', id: 'MyPortfolio' },
-    { label: 'Testimonials', id: 'testimonial' }
   ];
 
   const drawer = (

@@ -67,73 +67,148 @@
       "id": "1",
       "src": "./img/Cover.png",
       "title": "MedTime",
-      "description": " Developed a medication management app using Flutter, Firebase, and Riverpod for State  Management. Features include reminders, medication management, and timely notifications. ",
+      "description": "Developed a medication management app using Flutter, Firebase, and Riverpod for State Management. Features include reminders, medication management, and timely notifications.",
       "link": "View In Github",
-      "linkUrl": "https://github.com/ahmedali221/medtime",
+      "linkUrl": "https://github.com/ahmedali221/medicin_reminder_app",
       "technologies": [
         "Flutter",
         "Firebase",
         "Riverpod",
-        "Local Notifications",
-        "Cloud Functions"
+        "Local Notifications"
       ]
     },
     {
       "id": "2",
       "src": "./img/HomeZmart.jpg",
       "title": "HomeZmart",
-      "description": "Developed a cross-platform app using Flutter, Firebase, and BLoC for State Management. Features includebrowsing, product categories, cart management, and secure payments.",
+      "description": "ITI training project - E-commerce web app built with JavaScript, HTML5, and CSS3. Features product catalog, shopping cart, and responsive design.",
       "link": "View In Github",
       "linkUrl": "https://github.com/ahmedali221/homezmart",
       "technologies": [
-        "Flutter",
-        "Firebase",
-        "BLoC",
-        "Cloud Firestore",
-        "Stripe Payment"
+        "JavaScript",
+        "HTML5",
+        "CSS3"
       ]
     },
     {
       "id": "3",
-      "src": "./img/Shoppy.png",
-      "title": "Shoppy",
-      "description": "Developed a cross-platform app using Flutter, Firebase, and BLoC for State Management. Features include browsing, product categories, cart management, and secure payments.",
+      "src": "./img/news-app.jpg",
+      "title": "News Aggregator",
+      "description": "ITI training project - Angular news app consuming multiple APIs. Features category filtering, search, and article bookmarking.",
       "link": "View In Github",
+      "linkUrl": "https://github.com/ahmedali221/news_app",
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "4",
+      "src": "./img/dashboard.jpg",
+      "title": "Al-Mentor Admin Dashboard",
+      "description": "Ongoing ITI training project - Angular dashboard with data visualization and user management features.",
+      "link": "View In Progress",
+      "linkUrl": "https://github.com/ahmedali221/Al-Mentor-Dashboard",
+      "technologies": [
+        "Angular",
+        "Chart.js",
+        "Firebase"
+      ]
+    },
+    {
+      "id": "5",
+      "src": "./img/movies-app.jpg",
+      "title": "Movie Discovery",
+      "description": "ITI training project - React movie app using TMDB API with search, filtering, and watchlist features.",
+      "link": "View In Github",
+      "linkUrl": "https://github.com/ahmedali221/MovieDiscovery-App",
+      "technologies": [
+        "React",
+        "TMDB API",
+        "Redux"
+      ]
+    },
+    {
+      "id": "6",
+      "src": "./img/shoppy.jpg",
+      "title": "Shoppy",
+      "description": "E-commerce mobile application connecting customers to suppliers with various products.",
+      "link": "View on GitHub",
       "linkUrl": "https://github.com/ahmedali221/shoppy",
       "technologies": [
+        "Dart",
         "Flutter",
+        "Bloc",
+        "Firebase"
+      ]
+    },
+  
+    {
+      "id": "7",
+      "src": "./img/prepai.jpg",
+      "title": "PrepAI",
+      "description": "Meal recommendation app with Gemini AI for dynamic meal suggestions and preparation steps.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/prepai",
+      "technologies": [
+        "Dart",
+        "Flutter",
+        "Riverpod",
         "Firebase",
-        "BLoC",
-        "REST APIs",
-        "Payment Integration"
+        "Gemini AI",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "id": "8",
+      "src": "./img/skyguard.jpg",
+      "title": "SkyGuard",
+      "description": "App advising users on outdoor safety based on real-time conditions using custom AI model.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/SkyGuard-App",
+      "technologies": [
+        "Dart",
+        "Flutter",
+        "Bloc",
+        "Firebase",
+        "Python",
+        "Flask",
+        "Restful API",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "id": "9",
+      "src": "./img/prtspd.jpg",
+      "title": "PrtSpd",
+      "description": "Bus booking app with trip comparison, reservations, payments, and real-time updates.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/bussapp",
+      "technologies": [
+        "Dart",
+        "Flutter",
+        "Bloc",
+        "MySQL",
+        "PHP",
+        "Restful API",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "id": "10",
+      "src": "./img/flickfind.jpg",
+      "title": "FlickFind",
+      "description": "Mobile app connecting movie enthusiasts to a vast library of films and TV shows.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/EyeGo_assignment",
+      "technologies": [
+        "Dart",
+        "Flutter",
+        "Bloc",
+        "TMDB API"
       ]
     }
-   
-  ],
-  "testimonial": [
-    {
-      "id": "1",
-      "count": "5",
-      "src": "./img/avatar-image.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "author_name": "Dianne Russel",
-      "author_designation": "Starbucks"
-    },
-    {
-      "id": "2",
-      "count": "5",
-      "src": "./img/avatar-image-1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "author_name": "Kristin Watson",
-      "author_designation": "Louis Vuitton"
-    },
-    {
-      "id": "3",
-      "count": "5",
-      "src": "./img/avatar-image-2.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "author_name": "Kathryn Murphy",
-      "author_designation": "McDonald's"
-    }
   ]
+
 }

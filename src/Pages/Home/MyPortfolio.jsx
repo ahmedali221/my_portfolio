@@ -12,105 +12,206 @@ export default function MyPortfolio() {
   };
 
   const [headerRef, headerInView] = useInView({ threshold: 0.2 });
-  const [cardsRef, cardsInView] = useInView({ threshold: 0.1 });
+  const [cardsRef, cardsInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [activeFilter, setActiveFilter] = React.useState('all');
+
+  const filteredProjects = data?.portfolio?.filter(item => {
+    if (activeFilter === 'flutter') {
+      return item.technologies.includes('Flutter');
+    } else if (activeFilter === 'web') {
+      return !item.technologies.includes('Flutter');
+    }
+    return true;
+  });
 
   return (
     <section id="MyPortfolio" className="py-5 bg-light">
-      <Row className="g-4 d-flex justify-content-center">
-        <div ref={headerRef} className={`text-center mb-5 ${headerInView ? 'animate__animated animate__fadeInDown animate__slow' : ''}`}>
-          <h1 className="mb-4">My Portfolio</h1>
+      <Container>
+        <div 
+          ref={headerRef} 
+          className={`text-center mb-5 ${headerInView ? 'animate__animated animate__fadeInDown animate__faster' : ''}`}
+          style={headerInView ? { 
+            animationDuration: '800ms',
+            animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)'
+          } : {}}
+        >
+          <h1 className="mb-4">My Journey</h1>
+          <div className="d-flex justify-content-center gap-3 mb-3">
+            <Button 
+              variant={activeFilter === 'all' ? 'primary' : 'outline-primary'}
+              onClick={() => setActiveFilter('all')}
+              style={{
+                backgroundColor: activeFilter === 'all' ? '#5E3BEE' : 'transparent',
+                borderColor: '#5E3BEE',
+                color: activeFilter === 'all' ? 'white' : '#5E3BEE',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              All
+            </Button>
+            <Button 
+              variant={activeFilter === 'flutter' ? 'primary' : 'outline-primary'}
+              onClick={() => setActiveFilter('flutter')}
+              style={{
+                backgroundColor: activeFilter === 'flutter' ? '#5E3BEE' : 'transparent',
+                borderColor: '#5E3BEE',
+                color: activeFilter === 'flutter' ? 'white' : '#5E3BEE',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              Mobile
+            </Button>
+            <Button 
+              variant={activeFilter === 'web' ? 'primary' : 'outline-primary'}
+              onClick={() => setActiveFilter('web')}
+              style={{
+                backgroundColor: activeFilter === 'web' ? '#5E3BEE' : 'transparent',
+                borderColor: '#5E3BEE',
+                color: activeFilter === 'web' ? 'white' : '#5E3BEE',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              Web
+            </Button>
+          </div>
           <Button 
             variant="outline-primary" 
             onClick={handleGitHubClick}
             style={{ 
-              backgroundColor: 'var(--primary)',
+              backgroundColor: '#5E3BEE',
               color: 'white',
               border: 'none',
               display: 'inline-flex',
               alignItems: 'center',
+              transition: 'all 0.3s ease'
             }}
           >
             <FaGithub /> Visit My GitHub
           </Button>
         </div>
-      </Row>
-      <Container>
-        <Row ref={cardsRef} className="g-4 justify-content-center">
-          {data?.portfolio?.map((item, index) => (
-            <Col
-              key={index}
-              xs={12}
-              md={6}
-              lg={4}
-              className={`${cardsInView ? 'animate__animated animate__fadeInUp animate__slow' : ''}`}
+
+        <div className="timeline">
+          {filteredProjects?.map((item, index) => (
+            <div 
+              key={`${item.id}-${activeFilter}`} 
+              ref={index === 0 ? cardsRef : null}
+              className={`timeline-item ${cardsInView ? 'animate__animated animate__fadeInUp animate__slow' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }} 
             >
-              <Card className="h-100 rounded shadow">
-                <div className="position-relative rounded-top">
-                  <Image src={item.src} alt={item.title || "Portfolio image"} className="img-fluid rounded-top h-auto" style={{ width: '100%', height: 'auto' }} />
-                </div>
-                <Card.Body className="d-flex flex-column justify-content-between p-4">
-                  <div>
-                    <Card.Title className="text-dark">{item.title}</Card.Title>
-                    <Card.Text className="text-muted">{item.description}</Card.Text>
-                    <div className="skills--section--technologies mt-3">
-                      <div className="mt-3 d-flex flex-wrap gap-2">
-                        {item.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            style={{
-                              backgroundColor: 'rgba(var(--primary-rgb), 0.1)',
-                              color: 'var(--primary)',
-                              padding: '6px 12px',
-                              borderRadius: '20px',
-                              fontSize: '0.875rem',
-                              fontWeight: '500',
-                              display: 'inline-block',
-                              margin: '2px',
-                              transition: 'all 0.3s ease',
-                              border: '1px solid var(--primary)',
-                              opacity: '0.9',
-                              whiteSpace: 'nowrap'
-                            }}
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+              <div className="timeline-marker"></div>
+              <div className="timeline-content card shadow">
+                <div className="card-body">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <h3 className="card-title mb-0">{item.title}</h3>
+                    <span className="badge bg-primary">{item.date}</span>
                   </div>
+                  <p className="card-text text-muted">{item.description}</p>
+                  
+                  <div className="mt-3 d-flex flex-wrap gap-2">
+                    {item.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="tech-badge"
+                        style={{
+                          backgroundColor: 'rgba(var(--primary-rgb), 0.1)',
+                          color: 'var(--primary)',
+                          padding: '6px 12px',
+                          borderRadius: '20px',
+                          fontSize: '0.875rem',
+                          fontWeight: '500',
+                          border: '1px solid var(--primary)'
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                  <a
-                    href={item.linkUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="d-flex align-items-center justify-content-between border-bottom pb-2 text-decoration-none fw-semibold mt-3"
-                    style={{ 
-                      color: 'var(--primary)',
-                      borderColor: 'var(--primary)'
-                    }}
-                  >
-                    {item.link}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 19"
-                      fill="none"
+
+                  {item.linkUrl && (
+                    <a
+                      href={item.linkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="d-flex align-items-center justify-content-between mt-3 text-decoration-none fw-semibold"
+                      style={{ color: 'var(--primary)' }}
                     >
-                      <path
-                        d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                        stroke="currentColor"
-                        strokeWidth="2.66667"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
+                      {item.link}
+                      <svg width="16" height="16" viewBox="0 0 20 19" fill="none">
+                        <path
+                          d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
+                          stroke="currentColor"
+                          strokeWidth="2.66667"
+                        />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
           ))}
-        </Row>
+        </div>
       </Container>
+
+      <style jsx>{`
+        .timeline {
+          position: relative;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .timeline::after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          background-color: var(--primary);
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -1px;
+        }
+        .timeline-item {
+          padding: 10px 40px;
+          position: relative;
+          width: 50%;
+          box-sizing: border-box;
+        }
+        .timeline-item:nth-child(odd) {
+          left: 0;
+        }
+        .timeline-item:nth-child(even) {
+          left: 50%;
+        }
+        .timeline-marker {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: var(--primary);
+          border: 3px solid white;
+          top: 15px;
+          z-index: 1;
+        }
+        .timeline-item:nth-child(odd) .timeline-marker {
+          right: -8px;
+        }
+        .timeline-item:nth-child(even) .timeline-marker {
+          left: -8px;
+        }
+        .timeline-content {
+          padding: 20px;
+          background-color: white;
+          position: relative;
+          border-radius: 6px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tech-badge {
+          transition: all 0.3s ease;
+        }
+        .tech-badge:hover {
+          background-color: var(--primary) !important;
+          color: white !important;
+          transform: translateY(-2px);
+        }
+      `}</style>
     </section>
   );
 }
