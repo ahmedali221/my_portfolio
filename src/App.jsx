@@ -10,15 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-     <div className="App">
       <Router>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="*" element={<div>404 Not Found</div>}></Route>
-          </Routes>
+          <div className="content-wrapper">
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="*" element={<div>404 Not Found</div>}></Route>
+            </Routes>
+          </div>
       </Router>
-    </div>
   )
 }
 

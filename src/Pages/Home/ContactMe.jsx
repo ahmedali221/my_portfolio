@@ -76,8 +76,9 @@ export default function ContactMe() {
             Contact Me
           </Typography>
           <Typography variant="body1" sx={{ color: 'var(--darkblue)' }}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, odit.
+          You Can Send Me A Message Via The Form Below.
           </Typography>
+         
         </Box>
 
         <Box
@@ -141,16 +142,18 @@ export default function ContactMe() {
 
             <Grid item xs={12}>
               <Button
-                variant="contained"
+                variant="outlined"
                 type="submit"
                 sx={{
-                  backgroundColor: 'var(--primary)',
-                  color: 'white',
+                  borderColor: 'var(--primary)',
+                  color: 'var(--primary)',
                   py: 1.5,
                   px: 4,
                   '&:hover': {
-                    backgroundColor: 'var(--primary-dark)'
-                  }
+                    backgroundColor: 'var(--primary)',
+                    color: 'white',
+                  },
+                  transition: 'all 0.3s ease'
                 }}
               >
                 Submit

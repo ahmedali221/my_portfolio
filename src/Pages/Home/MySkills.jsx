@@ -13,7 +13,7 @@ export default function MySkills() {
       }}
     >
       <Container maxWidth="xl">
-        <Box sx={{ textAlign: 'center', mb: 8, px: { xs: 3, sm: 6, md: 0 } }}> {/* Added horizontal padding here */}
+        <Box sx={{ textAlign: 'center', mb: 8, px: { xs: 3, sm: 6, md: 0 } }}> 
           <Typography
             variant="h2"
             sx={{

@@ -158,44 +158,67 @@ export default function MyPortfolio() {
           max-width: 1200px;
           margin: 0 auto;
         }
-        .timeline::after {
-          content: '';
-          position: absolute;
-          width: 2px;
-          background-color: var(--primary);
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          margin-left: -1px;
+        
+        @media (max-width: 767px) {
+          .timeline::after {
+            display: none;
+          }
+          .timeline-item {
+            width: 100%;
+            padding: 10px 20px;
+            left: 0 !important;
+            margin-bottom: 20px;
+          }
+          .timeline-marker {
+            left: 20px !important;
+            right: auto !important;
+          }
+          .timeline-content {
+            margin-left: 30px;
+          }
         }
-        .timeline-item {
-          padding: 10px 40px;
-          position: relative;
-          width: 50%;
-          box-sizing: border-box;
+        
+        @media (min-width: 768px) {
+          .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+          }
+          .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+          }
+          .timeline-item:nth-child(odd) {
+            left: 0;
+          }
+          .timeline-item:nth-child(even) {
+            left: 50%;
+          }
+          .timeline-marker {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            top: 15px;
+            z-index: 1;
+          }
+          .timeline-item:nth-child(odd) .timeline-marker {
+            right: -8px;
+          }
+          .timeline-item:nth-child(even) .timeline-marker {
+            left: -8px;
+          }
         }
-        .timeline-item:nth-child(odd) {
-          left: 0;
-        }
-        .timeline-item:nth-child(even) {
-          left: 50%;
-        }
-        .timeline-marker {
-          position: absolute;
-          width: 1rem;
-          height: 1rem;
-          border-radius: 50%;
-          background: var(--primary);
-          border: 3px solid white;
-          top: 15px;
-          z-index: 1;
-        }
-        .timeline-item:nth-child(odd) .timeline-marker {
-          right: -8px;
-        }
-        .timeline-item:nth-child(even) .timeline-marker {
-          left: -8px;
-        }
+        
         .timeline-content {
           padding: 20px;
           background-color: white;

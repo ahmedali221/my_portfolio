@@ -71,7 +71,6 @@ function Navbar() {
 
   return (
     <AppBar 
-      position="fixed" 
       sx={{ 
         backgroundColor: 'var(--white)',
         boxShadow: isScrolled ? '0px 5.333px 80px 0 rgba(0, 0, 0, 0.1)' : 'none',
@@ -160,10 +159,12 @@ function Navbar() {
                 borderColor: 'var(--primary)',
                 color: 'var(--primary)',
                 '&:hover': {
-                  borderColor: 'var(--primary)',
                   backgroundColor: 'var(--primary)',
-                  color: 'white'
-                }
+                  color: 'white',
+                },
+                transition: 'all 0.3s ease',
+                px: 3,
+                py: 1
               }}
             >
               Contact Me
