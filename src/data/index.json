@@ -208,6 +208,24 @@
         "Bloc",
         "TMDB API"
       ]
+    },
+    {
+      "id": "11",
+      "src": "./img/twitter-clone.jpg", 
+      "title": "Twitter Clone",
+      "description": "Full-stack Twitter clone built with MERN stack and Socket.io, featuring real-time updates, tweet functionality, and user interactions.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/Twitter-Clone",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "JWT Authentication",
+        "REST API",
+        "Real-time Updates"
+      ]
     }
   ]
 
