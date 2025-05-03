@@ -38,7 +38,7 @@ export default function HeroSection() {
   }, [titleIndex, fullTitle, titleVisible]);
 
   const handleViewCV = () => {
-    window.open("https://drive.google.com/file/d/1H2xAYHiQ9F1hD2DYuOfM9ESGqQfyz-5W/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1_AReCBZ0WuvImVc9fYaOyOLrdMn3o1MY/view?usp=sharing", "_blank");
   };
 
   return (
