@@ -226,7 +226,19 @@
         "REST API",
         "Real-time Updates"
       ]
+    },
+    {
+      "id": "12",
+      "src": "./img/tomah.jpg",  
+      "title": "to'mah",
+      "description": "Freelance project for a restaurant in Saudi Arabia. Developed using React and styled with Daisy UI and Tailwind CSS.",
+      "link": "View on GitHub",
+      "linkUrl": "https://github.com/ahmedali221/To-mah-Website", 
+      "technologies": [
+        "React",
+        "Daisy UI",
+        "Tailwind CSS"
+      ]
     }
   ]
-
 }
